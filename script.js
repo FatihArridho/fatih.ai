@@ -13,7 +13,7 @@ var dialog = [
    },
    {
       patterns: ["hai", "halo", "hi"],
-      responses: ["iyaa haii", "haloo haloo", "halo desu", "hai user bot~]
+      responses: ["iyaa haii", "haloo haloo", "halo desu", "hai user bot~"]
    },
    {
       patterns: ["fatih"],
