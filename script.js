@@ -1,15 +1,15 @@
 var chatForm = document.querySelector(".chat-form");
 var chatInput = document.querySelector("input");
-var chatContainer = document.querySelector("chat.container");
+var chatContainer = document.querySelector(".chat.container");
 
 var dialog = [
    {
       patterns: ["kntl", "anjg", "ajg", "mmk"],
-      responses: ["dih kasar"]
+      responses: ["dih kasar", "kasar bgt"]
    },
    {
       patterns: ["oi", "woi"],
-      responses: ["apaan?"]
+      responses: ["apaan?", "ada apa?"]
    },
    ];
    
@@ -18,17 +18,18 @@ chatForm.addEventListener("submit" function(e){
    
    var inputValue = chatInput.value.toLowerCase().trim();
    
-   if (inputValue !==""){
+   if (inputValue !== ""){
       var userChat = document.createElement("div");
       
       userChat.className = "chat user";
       userChat.innerHTMl = "<p>" + chatInput.value + "</p>";
       chatContainer.appendChild(userChat);
       
+      var botResponse = generateBotResponse(inputValue);
+      
       displayBotResponse(botResponse);
       
       chatInput.value = "";
-      
    }
 });
 
@@ -40,23 +41,23 @@ function generateBotResponse(inputValue){
       var responses = dialog[i].responses;
       
       for (var j = 0; j < patterns.length; j++){
-         if (inputValue.include(patterns[j])){
+         if (inputValue.includes(patterns[j])){
             matchedResponses = matchedResponses.concat(responses);
          }
       }
    }
    
    if (matchedResponses.length > 0){
-      var randomIndex = Math.floor(Math.random * matchedResponses.length);
+      var randomIndex = Math.floor(Math.random() * matchedResponses.length);
       
       return matchedResponses[randomIndex];
    } else {
       var defaultResponses = [
          "hah, blm ngerti", "nda ngerti"
          ];
-         var randomIndex = Math.floor(Math.random * defaultResponses.length);
+         var randomIndex = Math.floor(Math.random() * defaultResponses.length);
          
-         return matchedResponses[randomIndex];
+         return defaultResponses[randomIndex];
    }
 }
 

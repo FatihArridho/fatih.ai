@@ -1,7 +1,7 @@
 {
    margin: 0;
    padding: 0;
-   block-sizing: border-box;
+   box-sizing: border-box;
 }
 body{
    background-color: #eee;
@@ -12,14 +12,14 @@ body{
 }
 .container{
    position: relative;
-   width: 50px;
+   width: 500px;
    height: 100vh;
 }
 .chat-form{
    position: absolute;
    right: 0;
-   left: 0;
    bottom: 30px;
+   left: 0;
 }
 .chat-form input{
    width: 100%;
@@ -35,8 +35,8 @@ body{
 .chat-container{
    position: absolute;
    right: 0;
-   left: 0;
    bottom: 100px;
+   left: 0;
    display: flex;
    flex-direction: column;
    gap: 10px;
@@ -54,7 +54,7 @@ body{
    background:-color: #ccc;
    font-size: .8em;
    padding: 10px 15px;
-   border-radius: 0 15px 15px 15px;
+   border-radius: 15px 0 15px 15px;
 }
 .bot p{
    width: max-content;
