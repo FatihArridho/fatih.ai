@@ -4,7 +4,7 @@ var chatContainer = document.querySelector(".chat-container");
 
 var dialog = [
    {
-      patterns: ["kntl", "anjg", "ajg", "mmk", "kontol" "memek", "jembut"],
+      patterns: ["kntl", "anjg", "ajg", "mmk", "kontol", "memek", "jembut"],
       responses: ["dih kasar", "kok lu kasar sih", "heh toxic, dosa!", "astagfirullah toxic", "ketikannya dijaga y.", "toxic lo yee!"]
    },
    {
