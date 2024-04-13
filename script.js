@@ -57,7 +57,7 @@ function generateBotResponse(inputValue){
       return matchedResponses[randomIndex];
    } else {
       var defaultResponses = [
-         "mohon maaf, fatih.ai sedang dalam tahap pengembangan. saya merespon anda melalui database yang tersedia. terima kasih"
+         "fatih.ai sedang dalam tahap pengembangan. contact t.me/fatdho"
          ];
          var randomIndex = Math.floor(Math.random() * defaultResponses.length);
          
