@@ -17,12 +17,25 @@ var dialog = [
    },
    {
       patterns: ["fatih"],
-      responses: ["kamu hububgi pemilikku? ketik 'info'"]
+      responses: ["kamu cariin fatih? ketik 'info'"]
    },
    {
       patterns: ["info"],
       responses: ["untuk info pemilikku bisa ke https://tih.is-a.dev"]
    },
+   {
+      patterns: ["assalamualaikum", "assalamu'alaikum"],
+      responses: ["waalaikumussalam, ada apa?", "waalaikumussalam knp nih?", "waalaikumussalam, eh elu lagi"]
+   },
+   {
+      patterns: ["syalom", "shalom", "salom"],
+      responses: ["shalom, ada apa kak?", "shalom, knp ka", "shalom ada apa kakandaa??"]
+   },
+   {
+      patterns: ["selamat pagi", "good morning", "morning"],
+      responses: ["pagii kakakk", "selamat pagi desu~", "morning desu~"]
+   },
+   }
    ];
    
 chatForm.addEventListener("submit", function(e){
