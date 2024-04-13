@@ -1,7 +1,7 @@
 {
    margin: 0;
    padding: 0;
-   block-size: border-box;
+   block-sizing: border-box;
 }
 body{
    background-color: #eee;
@@ -50,6 +50,13 @@ body{
    justify-content: end;
 }
 .user p{
+   width: max-content;
+   background:-color: #ccc;
+   font-size: .8em;
+   padding: 10px 15px;
+   border-radius: 0 15px 15px 15px;
+}
+.bot p{
    width: max-content;
    background-color: #6766FF;
    color: #eee;

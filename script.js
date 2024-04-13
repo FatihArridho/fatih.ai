@@ -1,6 +1,6 @@
-var chatForm = document.quickSelector(".chat-form");
-var chatInput = document.quickSelector("input");
-var chatContainer = document.quickSelector("chat.container");
+var chatForm = document.querySelector(".chat-form");
+var chatInput = document.querySelector("input");
+var chatContainer = document.querySelector("chat.container");
 
 var dialog = [
    {
@@ -18,7 +18,7 @@ chatForm.addEventListener("submit" function(e){
    
    var inputValue = chatInput.value.toLowerCase().trim();
    
-   if (inputValue !=""){
+   if (inputValue !==""){
       var userChat = document.createElement("div");
       
       userChat.className = "chat user";
@@ -39,7 +39,7 @@ function generateBotResponse(inputValue){
       var patterns = dialog[i].patterns;
       var responses = dialog[i].responses;
       
-      for (var j = 0; patterns.length; j++){
+      for (var j = 0; j < patterns.length; j++){
          if (inputValue.include(patterns[j])){
             matchedResponses = matchedResponses.concat(responses);
          }
@@ -66,8 +66,8 @@ function displayBotResponse(response){
    botChat.className = "fatih.ai";
    botChat.innerHTML = "<p>" + response + "</p>";
    
-   // delay respon 2 second
+   // delay response bot every 1 second
    setTimout(function(){
       chatContainer.appendChild(botChat);
-   }, 2000); // 1000 = 1 second
+   }, 1000); // 1000 = 1 second
 }
