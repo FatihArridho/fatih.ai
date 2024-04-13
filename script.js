@@ -76,12 +76,18 @@ function generateBotResponse(inputValue){
       
       return matchedResponses[randomIndex];
    } else {
-      var defaultResponses = [
-         "fatih.ai sedang dalam tahap pengembangan. contact t.me/fatdho"
-         ];
-         var randomIndex = Math.floor(Math.random() * defaultResponses.length);
-         
-         return defaultResponses[randomIndex];
+        var apiUrl = 'https://dikaardnt.com/api/tool/openai';
+        var postData = 'message=' + encodeURIComponent(inputValue);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', apiUrl, true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+                displayBotResponse(response);
+            }
+        };
+        xhr.send(postData);
    }
 }
 
