@@ -35,7 +35,6 @@ var dialog = [
       patterns: ["selamat pagi", "good morning", "morning"],
       responses: ["pagii kakakk", "selamat pagi desu~", "morning desu~"]
    },
-   }
    ];
    
 chatForm.addEventListener("submit", function(e){
