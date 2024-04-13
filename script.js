@@ -1,6 +1,6 @@
 var chatForm = document.querySelector(".chat-form");
 var chatInput = document.querySelector("input");
-var chatContainer = document.querySelector(".chat.container");
+var chatContainer = document.querySelector(".chat-container");
 
 var dialog = [
    {
@@ -10,6 +10,10 @@ var dialog = [
    {
       patterns: ["oi", "woi"],
       responses: ["apaan?", "ada apa?"]
+   },
+   {
+      patterns: ["hai", "halo"],
+      responses: ["iyaa haii", "haloo haloo", "halo desu"]
    },
    ];
    
