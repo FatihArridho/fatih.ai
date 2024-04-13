@@ -51,7 +51,7 @@ body{
 }
 .user p{
    width: max-content;
-   background:-color: #ccc;
+   background-color: #ccc;
    font-size: .8em;
    padding: 10px 15px;
    border-radius: 15px 0 15px 15px;

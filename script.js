@@ -17,7 +17,7 @@ var dialog = [
    },
    ];
    
-chatForm.addEventListener("submit" function(e){
+chatForm.addEventListener("submit", function(e){
    e.preventDefault();
    
    var inputValue = chatInput.value.toLowerCase().trim();
@@ -26,7 +26,7 @@ chatForm.addEventListener("submit" function(e){
       var userChat = document.createElement("div");
       
       userChat.className = "chat user";
-      userChat.innerHTMl = "<p>" + chatInput.value + "</p>";
+      userChat.innerHTML = "<p>" + chatInput.value + "</p>";
       chatContainer.appendChild(userChat);
       
       var botResponse = generateBotResponse(inputValue);
@@ -72,7 +72,7 @@ function displayBotResponse(response){
    botChat.innerHTML = "<p>" + response + "</p>";
    
    // delay response bot every 1 second
-   setTimout(function(){
+   setTimeout(function(){
       chatContainer.appendChild(botChat);
    }, 1000); // 1000 = 1 second
 }
