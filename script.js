@@ -12,7 +12,7 @@ var dialog = [
       responses: ["apaan?", "ada apa?"]
    },
    {
-      patterns: ["hai", "halo"],
+      patterns: ["hai", "halo", "hi"],
       responses: ["iyaa haii", "haloo haloo", "halo desu"]
    },
    ];
@@ -57,7 +57,7 @@ function generateBotResponse(inputValue){
       return matchedResponses[randomIndex];
    } else {
       var defaultResponses = [
-         "hah, blm ngerti", "nda ngerti"
+         "mohon maaf, fatih.ai sedang dalam tahap pengembangan. saya merespon anda melalui database yang tersedia. terima kasih"
          ];
          var randomIndex = Math.floor(Math.random() * defaultResponses.length);
          
@@ -68,7 +68,7 @@ function generateBotResponse(inputValue){
 function displayBotResponse(response){
    var botChat = document.createElement("div");
    
-   botChat.className = "fatih.ai";
+   botChat.className = "chat fatih-ai";
    botChat.innerHTML = "<p>" + response + "</p>";
    
    // delay response bot every 1 second
