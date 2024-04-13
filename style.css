@@ -1,118 +1,71 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
-
-/* General styles */
-body {
-    font-family: Sans-Serif;
-    background-color: #eee;
-    color: #111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+body{
+   background-color: #eee;
+   color: #111;
+   font-family: Sans-Serif;
+   display: flex;
+   justify-content: center;
 }
-
-.container {
-    width: 100%;
-    max-width: 500px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow-y: hidden; /* Prevent chat bubbles from overflowing */
+.container{
+   position: relative;
+   width: 500px;
+   height: 100vh;
 }
-
-/* Chat form styles */
-.chat-form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    padding: 10px;
+.chat-form{
+   position: absolute;
+   right: 0;
+   bottom: 30px;
+   left: 0;
 }
-
-.chat-form input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-right: 10px;
-    outline: none;
+.chat-form input{
+   width: 100%;
+   background: none;
+   border: 2px solid #888;
+   outline: none;
+   padding: 15px;
+   border-radius: 5px;
 }
-
-.chat-form input:focus {
-    border-color: #555;
+.chat-form input:focus{
+   border-color: #555;
 }
-
-/* Chat container styles */
-.chat-container {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto; /* Allow scrolling for chat bubbles */
-    display: flex;
-    flex-direction: column-reverse; /* Reverse order for chat bubbles */
+.chat-container{
+   position: absolute;
+   right: 0;
+   bottom: 100px;
+   left: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
 }
-
-/* Chat bubble styles */
-.chat {
-    margin-top: 10px; /* Change margin to margin-top */
-    max-width: 80%;
-    align-self: flex-start; /* Align chat bubbles to left */
-    background-color: #e0f0f0;
-    border-radius: 15px 0 15px 15px;
-    padding: 10px 15px;
+.chat{
+   transform: translateY(20px);
+   animation: chat_masuk .3s forwards;
 }
-
-.user {
-    align-self: flex-end; /* Align user chat to right */
-    background-color: #e0f0f0;
-    border-radius: 15px 0 15px 15px;
+.user{
+   display: flex;
+   justify-content: end;
 }
-
-.fatih-ai {
-    align-self: flex-start; /* Align bot chat to left */
-    background-color: #6766FF;
-    color: #fff;
-    border-radius: 0 15px 15px 15px;
+.user p{
+   width: max-content;
+   background-color: #ccc;
+   font-size: .8em;
+   padding: 10px 15px;
+   border-radius: 15px 0 15px 15px;
 }
-
-/* Animation */
-@keyframes chat_masuk {
-    100% {
-        transform: translateY(0);
-    }
+.fatih-ai p{
+   width: max-content;
+   background-color: #6766FF;
+   color: #eee;
+   font-size: .8em;
+   padding: 10px 15px;
+   border-radius: 0 15px 15px 15px;
 }
-
-.chat {
-    animation: chat_masuk .3s forwards;
-}
-
-/* Media query for mobile */
-@media only screen and (max-width: 599px) {
-    .container {
-        padding: 20px;
-        box-sizing: border-box;
-        overflow-y: auto;
-    }
-
-    .chat-form {
-        padding: 10px;
-    }
-
-    .chat-container {
-        height: calc(100vh - 160px);
-    }
-
-    .chat {
-        max-width: 100%;
-    }
+@keyframes chat_masuk{
+   100%{
+      transform: translateY(0);
+   }
 }
