@@ -35,6 +35,10 @@ var dialog = [
       patterns: ["selamat pagi", "good morning", "morning"],
       responses: ["pagii kakakk", "selamat pagi desu~", "morning desu~"]
    },
+   {
+      patterns: ["terimakasih", "terima kasih"],
+      responses: ["sama-sama kakak~", "samaa samaa desu", "sama-sama desu^^"]
+   },
    ];
    
 chatForm.addEventListener("submit", function(e){
@@ -88,6 +92,8 @@ function generateBotResponse(inputValue){
             }
         };
         xhr.send(postData);
+        
+        return "Sedang memproses..."
    }
 }
 
