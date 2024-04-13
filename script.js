@@ -4,16 +4,16 @@ var chatContainer = document.querySelector(".chat-container");
 
 var dialog = [
    {
-      patterns: ["kntl", "anjg", "ajg", "mmk"],
-      responses: ["dih kasar", "kasar bgt"]
+      patterns: ["kntl", "anjg", "ajg", "mmk", "kontol" "memek", "jembut"],
+      responses: ["dih kasar", "kok lu kasar sih", "heh toxic, dosa!", "astagfirullah toxic", "ketikannya dijaga y.", "toxic lo yee!"]
    },
    {
       patterns: ["oi", "woi"],
-      responses: ["apaan?", "ada apa?"]
+      responses: ["apaan?", "knp sihh", "ngapaa sihh"]
    },
    {
       patterns: ["hai", "halo", "hi"],
-      responses: ["iyaa haii", "haloo haloo", "halo desu"]
+      responses: ["iyaa haii", "haloo haloo", "halo desu", "hai user bot~ ♥"]
    },
    ];
    
