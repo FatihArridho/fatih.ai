@@ -13,7 +13,15 @@ var dialog = [
    },
    {
       patterns: ["hai", "halo", "hi"],
-      responses: ["iyaa haii", "haloo haloo", "halo desu", "hai user bot~ ♥"]
+      responses: ["iyaa haii", "haloo haloo", "halo desu", "hai user bot~]
+   },
+   {
+      patterns: ["fatih"],
+      responses: ["kamu hububgi pemilikku? ketik 'info'"]
+   },
+   {
+      patterns: ["info"],
+      responses: ["untuk info pemilikku bisa ke https://tih.is-a.dev"]
    },
    ];
    
