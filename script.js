@@ -39,6 +39,10 @@ var dialog = [
       patterns: ["terimakasih", "terima kasih"],
       responses: ["sama-sama kakak~", "samaa samaa desu", "sama-sama desu^^"]
    },
+   {
+      patterns: ["gpp", "gapapa"],
+      responses: ["kmu yakin gpp?", "yakin nih gpp?", "are u okay? jgn gpp, sini yuk cerita"]
+   },
    ];
    
 chatForm.addEventListener("submit", function(e){
@@ -93,18 +97,19 @@ function generateBotResponse(inputValue){
         };
         xhr.send(postData);
         
-        return "Sedang memproses..."
+        return "";
    }
 }
-
 function displayBotResponse(response){
-   var botChat = document.createElement("div");
+   if (response !== "") {
+      var botChat = document.createElement("div");
    
-   botChat.className = "chat fatih-ai";
-   botChat.innerHTML = "<p>" + response + "</p>";
+      botChat.className = "chat fatih-ai";
+      botChat.innerHTML = "<p>" + response + "</p>";
    
-   // delay response bot every 1 second
-   setTimeout(function(){
-      chatContainer.appendChild(botChat);
-   }, 1000); // 1000 = 1 second
+      // delay response bot every 1 second
+      setTimeout(function(){
+         chatContainer.appendChild(botChat);
+      }, 1000); // 1000 = 1 second
+   }
 }

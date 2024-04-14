@@ -1,27 +1,42 @@
-{
+/* Reset CSS */
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
-body{
+
+/* Body Styles */
+body {
    background-color: #eee;
    color: #111;
    font-family: Sans-Serif;
    display: flex;
    justify-content: center;
-}
-.container{
-   position: relative;
-   width: 500px;
    height: 100vh;
+   overflow: hidden;
 }
-.chat-form{
+
+/* Container Styles */
+.container {
+   position: relative;
+   width: 100%;
+   max-width: 500px;
+   height: 100%;
+   overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Chat Form Styles */
+.chat-form {
    position: absolute;
-   right: 0;
-   bottom: 30px;
+   bottom: 0;
    left: 0;
+   width: 100%;
+   padding: 10px;
+   background-color: #fff;
+   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
-.chat-form input{
+
+.chat-form input {
    width: 100%;
    background: none;
    border: 2px solid #888;
@@ -29,43 +44,56 @@ body{
    padding: 15px;
    border-radius: 5px;
 }
-.chat-form input:focus{
+
+.chat-form input:focus {
    border-color: #555;
 }
-.chat-container{
-   position: absolute;
-   right: 0;
-   bottom: 100px;
-   left: 0;
+
+/* Chat Container Styles */
+.chat-container {
+   padding: 10px;
    display: flex;
    flex-direction: column;
    gap: 10px;
+   overflow-y: auto; /* Enable vertical scrolling if content overflows */
+   height: calc(100% - 160px); /* Adjust height to accommodate chat form and spacing */
 }
-.chat{
+
+/* Chat Message Styles */
+.chat {
    transform: translateY(20px);
    animation: chat_masuk .3s forwards;
 }
-.user{
+
+.user {
    display: flex;
-   justify-content: end;
+   justify-content: flex-end;
 }
-.user p{
+
+.user p,
+.fatih-ai p {
    width: max-content;
-   background-color: #ccc;
    font-size: .8em;
    padding: 10px 15px;
+   border-radius: 15px;
+   word-wrap: break-word;
+}
+
+.user p {
+   background-color: #ccc;
    border-radius: 15px 0 15px 15px;
 }
-.fatih-ai p{
-   width: max-content;
+
+.fatih-ai p {
    background-color: #6766FF;
    color: #eee;
-   font-size: .8em;
-   padding: 10px 15px;
    border-radius: 0 15px 15px 15px;
 }
-@keyframes chat_masuk{
-   100%{
+
+/* Keyframes for Chat Entry Animation */
+@keyframes chat_masuk {
+   100% {
       transform: translateY(0);
    }
 }
+
